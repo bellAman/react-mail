@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router"
 
 export default class Header extends React.Component {
 	render() {
@@ -12,10 +13,21 @@ export default class Header extends React.Component {
 						src="assets/react-logo.svg"
 						style={ styles.logoImage }
 					/>
+					<Link to="/">
 					<h1 style={ styles.header }>rMail</h1>
+					</Link>
 				</div>
 
 				<div>
+					<Link to="/inbox">
+					<h1 style={ styles.header }>Inbox</h1>
+					</Link>
+					<Link to="/draft">
+					<h1 style={ styles.header }>Draft</h1>
+					</Link>
+					<Link to="/contacts">
+					<h1 style={ styles.header }>Contacts</h1>
+					</Link>
 				</div>
 			</header>
 		);
@@ -26,6 +38,7 @@ export default class Header extends React.Component {
 			header: {
 				color: "white"
 				, display: "inline-block"
+				, margin: "10px"
 			}
 			, link: {
 				color: "white"
